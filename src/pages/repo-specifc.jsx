@@ -9,7 +9,7 @@ export default function repoSpecific() {
 
   useEffect(() => {
     async function fetchData() {
-        const data = await getSpecificRepo({ repoName: params.name, owner: 'oriaderofia327' });
+        const data = await getSpecificRepo({ repoName: params.name, owner: 'sulenchy' });
         setRepo(data);
       }
   

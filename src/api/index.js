@@ -1,9 +1,9 @@
 export const BASE_URL = 'https://api.github.com';
-export const USER_REPOS_ENDPOINT = '/users/oriaderofia327/repos'
+export const USER_REPOS_ENDPOINT = '/users/sulenchy/repos'
 export const SPECIFIC_REPO_ENDPOINT = ({repoName, owner}) => `/repos/${owner}/${repoName}`
 
 export async function getAllRepos() {
-    const response = await fetch(`https://api.github.com/users/oriaderofia327/repos`);
+    const response = await fetch(`https://api.github.com/users/sulenchy/repos`);
     const data = await response.json();
 
     if (response.ok) {

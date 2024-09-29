@@ -1,17 +1,18 @@
 import {
-    createBrowserRouter,
+    createBrowserRouter, useNavigate,
   } from "react-router-dom";
-import { Home, RepoSpecific } from "../pages";
+import { Home, RepoSpecific, Error } from "../pages";
 import { MainLayout } from "../layouts";
-import { NotFound } from "../component";
-
+import { ErrorFallback, NotFound } from "../component";
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout />,
-        errorElement: <div>An error has occured. Do something about it</div>,
+        errorElement: <ErrorFallback 
+          error=''
+          />,
         children: [
           {
             path: '/',
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
           {
             path: 'repo/:name',
             element: <RepoSpecific />,
+          },
+          {
+            path: '/error-boundary',
+            element: <Error />
           },
           {
             path: '*',

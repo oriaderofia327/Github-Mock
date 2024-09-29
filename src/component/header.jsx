@@ -10,7 +10,8 @@ export default function header(){
             <nav className="nav">
                 <ul className="flex space-x-6 text-gray-700">
                 <li><Link to={'/'} className="hover:text-gray-900">Home</Link></li>
-                <li><a href="#about" className="hover:text-gray-900">About</a></li>
+                <li><Link to={'/about'} className="hover:text-gray-900">About</Link></li>
+                <li><Link to={'/error-boundary'} className="hover:text-gray-900">Test Error Boundary</Link></li>
                 </ul>
             </nav>
             </div>
