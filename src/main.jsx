@@ -3,10 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { Home, RepoSpecific } from './pages'
 import './styles/index.css'
 import {
-  createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import {router} from './routes';
 
